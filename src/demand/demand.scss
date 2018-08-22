@@ -1,0 +1,46 @@
+.demand{
+    padding: 20px;
+    .top-select{
+        .left-text{
+            line-height: 30px;
+            margin-left: 50px;
+            font-size: 14px
+        }
+        .right-input{
+            width: 200px;
+            height: 28px;
+            border:1px solid #eee;
+            padding-left: 8px;
+            &::-webkit-input-placeholder{
+                color: #999
+            }
+        }
+        .right-select{
+            width: 200px;
+            height: 28px;
+            border:1px solid #eee;
+            outline: none;
+        }
+    }
+    .demand-list{
+        width: 100%;
+        padding-top: 30px;
+        .demand-tab{
+            width: 100%;
+            text-align: center;
+            color: #666;
+            tr{
+                th{
+                    font-size: 14px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                td{
+                    font-size: 14px;
+                    line-height: 40px;
+                    border: 1px solid #eee;
+                }
+            }
+        }
+    }
+} 

@@ -1,0 +1,12 @@
+<div class="im-select">
+  <input type="text" class="im-select-input" value="" ng-disabled="disabled" class="im-daterangpicker" readonly placeholder="{{showText}}">
+  <div class="im-daterangpicker-con" ng-disabled="disabled" ng-if="startTime != 'Invalid date' && endTime != 'Invalid date' && startTime && endTime">
+    <div ng-if="!isSingle">
+      <span>{{startTime}}</span> ~
+      <span>{{endTime}}</span>
+    </div>
+    <div ng-if="isSingle">
+      <span>{{startTime}}</span>
+    </div>
+  </div>
+</div>

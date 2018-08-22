@@ -1,0 +1,46 @@
+{
+    "files.associations": {
+        "*.tpl": "html",
+        "*.vue": "vue",
+        "*.wpy": "vue",
+        "*.wxml": "html",
+        "*.wxss": "css"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "languageStylus.useSeparator": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "css.fileExtensions": [
+        "css",
+        "scss",
+        "styl",
+        "sass"
+    ],
+    "file_peek.searchFileExtensions": [
+        ".js",
+        ".ts",
+        ".styl",
+        ".html",
+        ".css",
+        ".scss"
+    ],
+    "stylusSupremacy.insertBraces": false,
+    "stylusSupremacy.insertSemicolons": false,
+    "stylusSupremacy.insertColons": false,
+    "stylusSupremacy.insertNewLineAroundImports": false,
+    "stylusSupremacy.insertNewLineAroundBlocks": true,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": false
+    },
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 1,
+    "gitlens.historyExplorer.enabled": true,
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "prettier.tabWidth": 4
+}

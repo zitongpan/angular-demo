@@ -1,0 +1,9 @@
+.header {
+  background: #0092da;
+  height: 70px;
+  line-height: 70px;
+}
+
+.header ul li {
+  margin: 0 30px;
+}
