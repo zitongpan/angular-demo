@@ -40,7 +40,7 @@ hero.controller('heroController', heroController)
             url: '/userManagement',
             component: 'userManagement'
         }).state('demandDetail',{
-            url: '/demandDetail',
+            url: '/demandDetail?:bid',
             component: 'demandDetail'
         })
     })

@@ -1,6 +1,6 @@
 const siteConfig = {
-  publicPath: 'http://localhost:8808/',
+  publicPath: 'http://localhost:8800/',
   host: 'localhost',
-  port: 8808
+  port: 8800
 };
 module.exports = siteConfig;

@@ -1,4 +1,23 @@
 .demand-detail{
-    font-size: 30px;
-    text-align: center;
+    padding: 20px;
+    h1{
+        font-size: 18px;
+        color: #666;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        padding: 20px 0;
+    }
+    .demand-tab{
+        margin-top: 40px;
+        table{
+            width: 100%;
+            border: 1px solid rgb(224, 224, 224);
+            tr{
+                td{
+                    border: 1px solid rgb(224, 224, 224);
+                    height: 40px;
+                    padding: 8px;
+                }
+            }
+        }
+    }
 }
