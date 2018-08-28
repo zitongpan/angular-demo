@@ -1,4 +1,25 @@
 .demand-detail {
-  font-size: 30px;
-  text-align: center;
+  padding: 20px;
+}
+
+.demand-detail h1 {
+  font-size: 18px;
+  color: #666;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+.demand-detail .demand-tab {
+  margin-top: 40px;
+}
+
+.demand-detail .demand-tab table {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+.demand-detail .demand-tab table tr td {
+  border: 1px solid #e0e0e0;
+  height: 40px;
+  padding: 8px;
 }

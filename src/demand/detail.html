@@ -1,4 +1,36 @@
-<div class="demand-detail animated slideInUp ">
-    list详情
-    尝试一下工作区隐藏
+<div class="demand-detail animated slideInUp minwidth">
+    <h1>需求详情</h1>
+    <div class="demand-tab">
+        <table class="tc" ng-repeat="item in vm.list | filter : vm.chosebook">
+            <tr>
+                <td width="33%" rowspan="5">
+                    <img ng-src="{{item.book_cover}}">
+                </td>
+                <td width="10%">书名</td>
+                <td width="56%" ng-bind="item.bookname"></td>
+            </tr>
+            <tr>
+                <td>作者</td>
+                <td ng-bind="item.author_name"></td>
+            </tr>
+            <tr>
+                <td>总共章节</td>
+                <td ng-bind="item.chapterNum"></td>
+            </tr>
+            <tr>
+                <td>分类</td>
+                <td>
+                    <span ng-bind="item.first_cate_name"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>价格/章</td>
+                <td ng-bind="item.price"></td>
+            </tr>
+            <tr>
+                <td>简介</td>
+                <td colspan="2" ng-bind="item.introduction">4</td>
+            </tr>
+        </table>
+    </div>
 </div>
