@@ -3,6 +3,7 @@ import 'angular';
 import 'angular-ui-router';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import 'echarts';
 
 //全局css
 import './app.css';
@@ -16,12 +17,12 @@ import heroController from './app.controller.js';
 // page
 import dashController from './dash/dash.controller.js';
 import dashTpl from './dash/dash.html';
-import demandController from './demand/demand.controller.js';
-import demandTpl from './demand/demand.html';
-import demandDetailController from './demand/detail.controller.js';
-import demandDetailTpl from './demand/detail.html';
-import userManagementController from './userManagement/userManagement.controller.js';
-import userManagementTpl from './userManagement/userManagement.html';
+import listController from './list/list.controller';
+import listTpl from './list/list.html';
+import listDetailController from './list/detail.controller';
+import listDetailTpl from './list/detail.html';
+import chartController from './chart/chart.controller';
+import chartTpl from './chart/chart.html';
 
 const modules = ['ui.IM','ui.router'];
 let hero = angular.module('hero', modules);
@@ -33,15 +34,15 @@ hero.controller('heroController', heroController)
         $stateProvider.state('dash',{
             url: '/dash',
             component: 'dash'
-        }).state('demand',{
-            url: '/demand',
-            component: 'demand'
-        }).state('userManagement',{
-            url: '/userManagement',
-            component: 'userManagement'
-        }).state('demandDetail',{
-            url: '/demandDetail?:bid',
-            component: 'demandDetail'
+        }).state('list',{
+            url: '/list',
+            component: 'list'
+        }).state('chart',{
+            url: '/chart',
+            component: 'chart'
+        }).state('listDetail',{
+            url: '/listDetail?:bid:type',
+            component: 'listDetail'
         })
     })
     .component('dash', {
@@ -49,18 +50,31 @@ hero.controller('heroController', heroController)
         controller: dashController,
         controllerAs: 'vm'
     })
-    .component('demand', {
-        template: demandTpl,
-        controller: demandController,
+    .component('list', {
+        template: listTpl,
+        controller: listController,
         controllerAs: 'vm'
     })
-    .component('userManagement', {
-        template: userManagementTpl,
-        controller: userManagementController,
+    .component('chart', {
+        template: chartTpl,
+        controller: chartController,
         controllerAs: 'vm'
     })
-    .component('demandDetail', {
-        template: demandDetailTpl,
-        controller: demandDetailController,
+    .component('listDetail', {
+        template: listDetailTpl,
+        controller: listDetailController,
         controllerAs: 'vm'
+    })
+    .factory('getAPI',($http)=>{
+        let getAPI={
+            getNovel:()=>{
+                return $http.get('https://www.apiopen.top/novelApi');
+            },
+            listPic:()=>{
+                // const deferred = $q.defer();
+                // const promise = deferred.promise;
+                return $http.get('https://www.apiopen.top/meituApi?page=1');
+            }
+        };
+        return getAPI;
     })

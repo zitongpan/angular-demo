@@ -1,0 +1,53 @@
+<div class="demand-detail animated slideInUp minwidth">
+    <h1>需求详情</h1>
+    <div class="demand-tab">
+        <table class="tc" ng-repeat="item in vm.list | filter : vm.chosebook">
+            <tr>
+                <td width="33%" rowspan="5">
+                    <img ng-src="{{item.book_cover}}">
+                </td>
+                <td width="10%">书名</td>
+                <td width="56%">
+                    <span ng-bind="item.bookname" ng-if="vm.type==='detail'"></span>
+                    <input type="text" value="{{item.bookname}}" ng-if="vm.type==='revise'">
+                </td>
+            </tr>
+            <tr>
+                <td>作者</td>
+                <td>
+                    <span ng-bind="item.author_name" ng-if="vm.type==='detail'"></span>
+                    <input type="text" value="{{item.author_name}}" ng-if="vm.type==='revise'">
+                </td>
+            </tr>
+            <tr>
+                <td>总共章节</td>
+                <td>
+                    <span ng-bind="item.chapterNum" ng-if="vm.type==='detail'"></span>
+                    <input type="text" value="{{item.chapterNum}}" ng-if="vm.type==='revise'">
+                </td>
+            </tr>
+            <tr>
+                <td>分类</td>
+                <td>
+                    <span ng-bind="item.first_cate_name" ng-if="vm.type==='detail'"></span>
+                    <input type="text" value="{{item.first_cate_name}}" ng-if="vm.type==='revise'">
+                </td>
+            </tr>
+            <tr>
+                <td>价格/章</td>
+                <td>
+                    <span ng-bind="item.price" ng-if="vm.type==='detail'"></span>
+                    <input type="text" value="{{item.price}}" ng-if="vm.type==='revise'">
+                </td>
+            </tr>
+            <tr>
+                <td>简介</td>
+                <td colspan="2" ng-bind="item.introduction">4</td>
+            </tr>
+        </table>
+    </div>
+    <div class="tc mt-5">
+        <span class="btn btn-primary mr-5" ui-sref="list">保存</span>
+        <span class="btn btn-outline-secondary" ui-sref="list">返回</span>
+    </div>
+</div>

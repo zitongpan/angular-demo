@@ -1,0 +1,20 @@
+.chartBox {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.chartBox #myChart, .chartBox #myChart3 {
+  width: 800px;
+  height: 400px;
+}
+
+.chartBox #myChart {
+  width: 800px;
+  height: 400px;
+}
+
+.chartBox #myChart1, .chartBox #myChart2 {
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+}

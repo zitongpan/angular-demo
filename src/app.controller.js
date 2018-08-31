@@ -1,4 +1,4 @@
-export default ($scope)=>{
+export default ($scope,$q,$http)=>{
     'ngInject';
     $scope.nav = [
         {
@@ -6,12 +6,12 @@ export default ($scope)=>{
             url: 'dash'
         }, 
         {
-            name: '需求列表',
-            url: 'demand'
+            name: '列表',
+            url: 'list'
         }, 
         {
-            name: '商家管理',
-            url: 'userManagement'
+            name: '图表',
+            url: 'chart'
         }
     ];
 }
