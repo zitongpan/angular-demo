@@ -45,6 +45,10 @@ hero.controller('heroController', heroController)
             component: 'listDetail'
         })
     })
+    .config(($httpProvider)=>{
+        $httpProvider.interceptors.push('httpSer');
+        $httpProvider.defaults.headers.post['content-type'] = 'application/json; charset=UTF-8';
+    })
     .component('dash', {
         template: dashTpl,
         controller: dashController,
@@ -77,4 +81,36 @@ hero.controller('heroController', heroController)
             }
         };
         return getAPI;
+    })
+    .factory('loadingSer',($rootScope)=>{
+        let Gload = {
+            defaultText: '数据加载中，请稍等...',
+            show() {
+                $rootScope.$broadcast('loading:show');
+            },
+            hide() {
+                $rootScope.$broadcast('loading:hide');
+            }
+        };
+        return Gload;
+    })
+    .factory('httpSer',(loadingSer)=>{
+        return{
+            request(config){
+                if(!config.headers['loading']){
+                    loadingSer.show();
+                }
+                console.log(config);
+                return config;
+            },
+            response(resp) {
+                loadingSer.hide();
+                return resp;
+            },
+            responseError(resp) {
+                loadingSer.hide();
+                console.log('获取失败');
+                return resp;
+            }
+        }
     })
