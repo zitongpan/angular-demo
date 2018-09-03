@@ -1,0 +1,11 @@
+<div class="im-pagination tc mt30">
+    <div uib-pagination class="pagination" total-items="totalRecord" items-per-page="pageSize" ng-model="currentPage" ng-change="getList()"
+        force-ellipses="true" max-size="5" boundary-link-numbers="true" rotate="false"></div>
+    <div class="inlineblock com-page">
+        <span class="f-8 ml28">到</span>
+        <input type="text" class="page-num" min=0 ng-model="jumpPage" int-transform="int">
+        <span class="f-8">页</span>
+        <span class="page-jump" ng-click="toPage()">跳转</span>
+        <span class="f-8 ml28" ng-show="total">共计 {{totalRecord}} 条</span>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 // 基础插件
 import 'angular';
 import 'angular-ui-router';
+import 'angular-ui-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'echarts';
@@ -100,7 +101,6 @@ hero.controller('heroController', heroController)
                 if(!config.headers['loading']){
                     loadingSer.show();
                 }
-                console.log(config);
                 return config;
             },
             response(resp) {
